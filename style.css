@@ -3,88 +3,142 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: 'Lora', serif;
     background-color: white;
     color: black;
     text-align: center;
-  }
-  
-  .nav-bar {
+}
+
+.nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-  }
-  
-  .logo {
-    width: 300px; /* Ajuste cette taille pour qu'elle corresponde */
-  }
-  
-  .about-link {
+}
+
+.logo {
+    width: 300px;
+    max-width: 100%; /* Ajuste automatiquement la taille sur petits écrans */
+    height: auto;
+}
+
+.about-link {
+    font-family: 'Lora', serif;
     font-size: 26px;
     text-decoration: underline;
     color: black;
-  }
-  
-  hr {
+}
+
+hr {
     width: 80%;
     margin: 10px auto;
-  }
-  
-  main {
+    border: 0.5px solid #ccc;
+}
+
+main {
     margin-top: 50px;
-  }
-  
-  h1 {
+}
+
+/* Style spécifique pour "Bientôt disponible" */
+.headline {
+    font-family: 'Zilla Slab', serif;
     font-size: 24px;
-  }
-  
-  /* Style de la page À propos */
-  .bio {
+    line-height: 1.5;
+    font-weight: normal; /* Texte en normal, pas en gras */
+}
+
+/* Style de la page À propos */
+.bio {
     margin: 20px;
-  }
-  
-  .bio p {
+}
+
+.bio p {
+    font-family: 'Lora', serif;
     font-size: 18px;
     margin: 10px 0;
-  }
-  
-  .social ul {
+    line-height: 1.6;
+}
+
+.social ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .social ul li {
+}
+
+.social ul li {
     margin: 10px 0;
-  }
-  
-  .social ul li a {
+}
+
+.social ul li a {
+    font-family: 'Lora', serif;
     text-decoration: none;
     color: black;
     font-size: 18px;
     text-decoration: underline;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
+}
+
+.social ul li a:hover {
+    color: #555; /* Change la couleur au survol */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
     .nav-bar {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-  
+
     .logo {
-      width: 300px; /* Logo plus petit pour mobile */
+        width: 250px; /* Logo plus petit pour mobile */
     }
-  
+
     .about-link {
-      margin-top: 10px;
+        margin-top: 10px;
+        font-size: 20px; /* Taille réduite pour "À propos" sur mobile */
     }
-  
-    h1 {
-      font-size: 20px;
+
+    .headline {
+        font-size: 20px; /* Réduction de la taille sur mobile */
     }
-  }
-  
+
+    .bio p {
+        font-size: 16px; /* Ajustement du texte "À propos" pour une lecture optimale */
+    }
+
+    .social ul li a {
+        font-size: 16px; /* Ajustement des liens sociaux */
+    }
+
+    hr {
+        width: 90%; /* Barre légèrement élargie sur mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-link {
+        font-size: 18px; /* Réduction supplémentaire pour les très petits écrans */
+    }
+
+    .headline {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 200px; /* Logo encore plus petit pour petits écrans */
+    }
+
+    .social ul li a {
+        font-size: 14px;
+    }
+}
+
+.about-link:hover {
+    color: #000066; /* Changement de couleur au survol */
+}
+
+.social ul li a:hover {
+    color: #000066;
+}
