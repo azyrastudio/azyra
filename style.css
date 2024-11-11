@@ -21,7 +21,7 @@ body {
 
 .logo {
     width: 300px;
-    max-width: 100%; /* Ajuste automatiquement la taille sur petits écrans */
+    max-width: 100%;
     height: auto;
 }
 
@@ -42,24 +42,36 @@ main {
     margin-top: 50px;
 }
 
-/* Style spécifique pour "Bientôt disponible" */
-.headline {
+h1 {
     font-family: 'Zilla Slab', serif;
     font-size: 24px;
     line-height: 1.5;
-    font-weight: normal; /* Texte en normal, pas en gras */
+    font-weight: normal;
 }
 
-/* Style de la page À propos */
-.bio {
-    margin: 20px;
+/* Déclaration pour la police Carl Brown */
+@font-face {
+    font-family: 'Carl Brown';
+    src: url('fonts/CarlBrown.woff2') format('woff2'),
+         url('fonts/CarlBrown.woff') format('woff'),
+         url('fonts/CarlBrown.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.bio p {
-    font-family: 'Lora', serif;
-    font-size: 18px;
-    margin: 10px 0;
-    line-height: 1.6;
+/* Texte personnalisé utilisant Carl Brown */
+.custom-font {
+    font-family: 'Carl Brown', serif;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Section "Nous Suivre" */
+.social h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
 .social ul {
@@ -72,15 +84,35 @@ main {
 }
 
 .social ul li a {
-    font-family: 'Lora', serif;
-    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none; /* Suppression du soulignement */
     color: black;
     font-size: 18px;
-    text-decoration: underline;
 }
 
 .social ul li a:hover {
-    color: #555; /* Change la couleur au survol */
+    color: #555; /* Changement de couleur au survol */
+}
+
+/* Espacement personnalisable */
+.spacer {
+    width: 100%; /* Assure que l'espacement s'applique sur toute la largeur */
+}
+
+.spacer.small {
+    height: 20px;
+}
+
+.spacer.medium {
+    height: 40px;
+}
+
+.spacer.large {
+    height: 60px;
+}
+
+.spacer.xlarge {
+    height: 110px;
 }
 
 /* Responsive design */
@@ -92,42 +124,42 @@ main {
     }
 
     .logo {
-        width: 250px; /* Logo plus petit pour mobile */
+        width: 250px;
     }
 
     .about-link {
         margin-top: 10px;
-        font-size: 20px; /* Taille réduite pour "À propos" sur mobile */
+        font-size: 20px;
     }
 
-    .headline {
-        font-size: 20px; /* Réduction de la taille sur mobile */
+    h1 {
+        font-size: 20px;
     }
 
     .bio p {
-        font-size: 16px; /* Ajustement du texte "À propos" pour une lecture optimale */
+        font-size: 16px;
     }
 
     .social ul li a {
-        font-size: 16px; /* Ajustement des liens sociaux */
+        font-size: 16px;
     }
 
     hr {
-        width: 90%; /* Barre légèrement élargie sur mobile */
+        width: 90%;
     }
 }
 
 @media (max-width: 480px) {
     .about-link {
-        font-size: 18px; /* Réduction supplémentaire pour les très petits écrans */
+        font-size: 18px;
     }
 
-    .headline {
+    h1 {
         font-size: 18px;
     }
 
     .logo {
-        width: 200px; /* Logo encore plus petit pour petits écrans */
+        width: 200px;
     }
 
     .social ul li a {
@@ -136,7 +168,7 @@ main {
 }
 
 .about-link:hover {
-    color: #000066; /* Changement de couleur au survol */
+    color: #000066;
 }
 
 .social ul li a:hover {
